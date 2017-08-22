@@ -1,0 +1,198 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* ========================================================================
+   Use this file to add custom CSS easily
+ ========================================================================== */
+
+/* Changed default button bg color to SAFE dark blue 
+.uk-button-primary {  
+background-color:#415970;   SAFE dark blue 
+color:#fff;   white 
+background-image:none  
+}  
+*/
+
+/* Disabled user control of starting/pausing video upon clicking */
+.ytplayer {
+pointer-events: none;
+position: absolute;
+}
+
+/* Fix movie banner size 
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.45%; 16:9 value - 56.25% 
+	padding-top: 25px;  25px originally 
+	height: 0;
+} 
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+}
+*/
+
+/* rectanguar banner, Bill Gates Foundation site as model
+.videoWrapper  
+{
+    position:absolute;
+    height: 65%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoWrapper iframe 
+{
+    min-width: 100%;
+    min-height: 180%;
+}
+*/
+
+/* fullscreen version, works 
+
+.videoWrapper  
+{
+    position:absolute;
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoWrapper iframe 
+{
+    min-width: 100%;
+    min-height: 120%;
+}
+*/
+
+/* Michael's way */
+.embed-container {  
+  position: relative;   
+  padding-bottom: 56.25%; /* ratio 16x9 */  
+  height: 0;   
+  overflow: hidden;   
+  width: 100%;  
+  height: auto;  
+}  
+.embed-container iframe {  
+  position: absolute;   
+  top: 0;   
+  left: 0;   
+  width: 100%;   
+  height: 100%;   
+}
+
+
+
+.tm-headerbar .tm-logo {  
+    display: table;  
+    float: none;  
+    margin-left: auto;  
+    margin-right: auto;  
+}
+
+
+
+/* Make menubar use its full length 
+.tm-navbar-sticky .tm-navbar-wrapper, .tm-navbar-sticky .tm-navbar-wrapper-animate {  
+	border-right-width: 0;  
+	border-left-width: 0;  
+}  
+.tm-navbar .uk-navbar {
+  	width: 2000px;
+} */
+.menubar { margin: 0px -20px -20px -20px; }
+
+
+/* adjust navbar length */
+.uk-navbar-nav > li.uk-width-1-10 {   
+width: 20%;   
+}    
+
+.uk-navbar-nav > li.uk-width-1-10 > a {  
+border: 1px solid rgba(0, 0, 0, 0.05);  
+}
+
+.uk-navbar-nav > li.uk-width-1-10 .uk-dropdown {  
+margin-top: 5px;  
+}
+
+/* Attempt to make top-a fullscreen length full-length 
+.my-fullscreen {
+  margin-top:10px;
+} */
+
+
+/* Make fullscreen height automatic */
+.tm-page {       
+z-index: 3;      
+position: relative;      
+}      
+
+.tm-fullscreen {    
+height: auto;    
+}
+
+/* Remove all module paddings 
+.tm-block-top-a > div > .uk-container {  
+max-width: 100%;  
+padding: 0;  
+} */
+
+/* Change module border horizontal separator 
+.uk-panel-box-primary .uk-article-separator.uk-margin-large {   
+border-color: rgba(255, 255, 255, 0.25);   
+margin-top: 20px;  
+padding-bottom: 30px;  
+}
+*/
+/* changes tm-page border color
+.tm-page {  
+box-shadow: none;  
+border: 1px solid #356673; }  
+}
+*/
+
+/*
+ * Blocks
+ */
+/* removed to c contrast
+border-top: 1px solid #eaeef0;
+}
+.tm-block-light {
+  background-color: #ffffff;
+}
+.tm-block-dark {
+  background-color: #fcfcfc;
+}
+
+ Block light and grey 
+.tm-block-light + .tm-block-dark,
+.tm-block-dark + .tm-block-light {
+  border-top: 1px solid #eaeef0;
+}
+.tm-block-light {
+  background-color: #ffffff;
+}
+.tm-block-dark {
+  background-color: #fcfcfc;
+  	  border-top: 1px solid #eaeef0;
+  padding-top: 70px; 
+  padding-bottom: 35px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+*/
+
+/* diable video controls */
+video::-webkit-media-controls {
+  display: none;
+}
+
+/* iframe loading image */
+.holds-the-iframe {
+  background:url(/images/group_of_people_for_safe.jpg) center center no-repeat;
+}
+

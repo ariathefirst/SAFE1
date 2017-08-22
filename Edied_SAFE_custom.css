@@ -1,0 +1,189 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/* ========================================================================
+   Use this file to add custom CSS easily
+ ========================================================================== */
+
+/* Changed default button bg color to SAFE dark blue 
+.uk-button-primary {  
+background-color:#415970;   SAFE dark blue 
+color:#fff;   white 
+background-image:none  
+}  
+*/
+
+/* Disabled user control of starting/pausing video upon clicking */
+.ytplayer {
+pointer-events: none;
+position: absolute;
+}
+
+/* Fix movie banner size 
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.45%; 16:9 value - 56.25% 
+	padding-top: 25px;  25px originally 
+	height: 0;
+} 
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60%;
+}
+*/
+
+/* rectanguar banner, Bill Gates Foundation site as model
+.videoWrapper  
+{
+    position:absolute;
+    height: 65%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoWrapper iframe 
+{
+    min-width: 100%;
+    min-height: 180%;
+}
+*/
+
+/* fullscreen version, works 
+
+.videoWrapper  
+{
+    position:absolute;
+    height: 70%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.videoWrapper iframe 
+{
+    min-width: 100%;
+    min-height: 120%;
+}
+*/
+
+/* Michael's way */
+.embed-container {  
+  position: relative;   
+  padding-bottom: 56.25%; /* ratio 16x9 */  
+  height: 0;   
+  overflow: hidden;   
+  width: 100%;  
+  height: auto;  
+}  
+.embed-container iframe {  
+  position: absolute;   
+  top: 0;   
+  left: 0;   
+  width: 100%;   
+  height: 100%;   
+}
+
+
+
+.tm-headerbar .tm-logo {  
+    display: table;  
+    float: none;  
+    margin-left: auto;  
+    margin-right: auto;  
+}
+
+
+
+/* Make menubar use its full length 
+.tm-navbar-sticky .tm-navbar-wrapper, .tm-navbar-sticky .tm-navbar-wrapper-animate {  
+	border-right-width: 0;  
+	border-left-width: 0;  
+}  
+.tm-navbar .uk-navbar {
+  	width: 2000px;
+} */
+.menubar { margin: 0px -20px -20px -20px; }
+
+
+/* adjust navbar length */
+.uk-navbar-nav > li.uk-width-1-10 {   
+width: 20%;   
+}    
+
+.uk-navbar-nav > li.uk-width-1-10 > a {  
+border: 1px solid rgba(0, 0, 0, 0.05);  
+}
+
+.uk-navbar-nav > li.uk-width-1-10 .uk-dropdown {  
+margin-top: 5px;  
+}
+
+/* Attempt to make top-a fullscreen length full-length 
+.my-fullscreen {
+  margin-top:10px;
+} */
+
+/* fix header */
+#header {  
+position: fixed;  
+width: 1220px;  
+max-width: 100%;  
+margin: 0 auto;  
+right: 0;  
+left: 0;  
+z-index: 999;  
+}  
+
+@media (min-width: 1000px) {  
+    #menubar { margin-right: 20px; }  
+    #logo { margin-left: 20px; }  
+    #header + * { margin-top: 95px;}  
+}  
+
+@media (max-width: 999px) {  
+
+    #header #header-responsive {   
+    display: block;   
+    padding: 0 20px;  
+    }  
+
+    #header + * { padding-top: 130px; }  
+
+    #header-responsive .logo,  
+    #header-responsive .searchbox {  
+    display: inline-block;  
+    width: 45%;  
+    vertical-align: middle;  
+    }  
+
+    #header-responsive .logo { margin-right: 10%; }  
+
+    #header-responsive .searchbox {  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;  
+    box-sizing: border-box;  
+    }  
+
+    /* Menu */  
+    .menu-responsive {  
+    width: 100%;  
+    font-size: 14px;  
+    }  
+
+    #toolbar,  
+    #logo,  
+    #menubar,  
+    #breadcrumbs { display: none; }  
+
+}
+
+/* Make fullscreen height automatic */
+.tm-page {       
+z-index: 3;      
+position: relative;      
+}      
+
+.tm-fullscreen {    
+height: auto;    
+}
